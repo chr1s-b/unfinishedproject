@@ -8,11 +8,16 @@ function createWindow() {
         width: 800,
         height: 600,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js')
-        }
+            preload: path.join(__dirname, 'preload.js'),
+            webSecurity: false
+        },
+        backgroundColor: '#e803fc',
+        icon: 'ico.jpg'
+        
     })
 
     // and load the index.html of the app.
+    
     mainWindow.loadFile('index.html')
 
     // Open the DevTools.
