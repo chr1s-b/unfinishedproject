@@ -1,0 +1,12 @@
+{
+  "name": "unfinishedproject",
+  "version": "0.0.0",
+  "description": "unfinishedproject-server",
+  "main": "main.ts",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": {
+    "name": ""
+  }
+}

@@ -1,8 +1,8 @@
 {
   "name": "unfinishedproject",
   "version": "0.0.0",
-  "description": "unfinishedproject",
-  "main": "app.js",
+  "description": "unfinishedproject-host",
+  "main": "app.ts",
   "scripts": {
     "start": "electron ."
   },
