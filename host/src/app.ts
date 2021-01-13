@@ -1,7 +1,7 @@
 import { app, BrowserWindow } from "electron";
 import * as path from "path";
 
-function createWindow() {
+function createWindow(splash: BrowserWindow) {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     height: 600,
@@ -14,6 +14,8 @@ function createWindow() {
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, "../index.html"));
 
+  // close splash screen
+  splash.close();
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
 }
@@ -22,12 +24,17 @@ function createWindow() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on("ready", () => {
-  createWindow();
+  // splash screen
+  let splash = new BrowserWindow({width: 600, height: 400, transparent: true, frame: false, alwaysOnTop: true});
+  splash.loadURL(`file://${__dirname}/../splash.html`);
+  setTimeout(() => {
+    createWindow(splash);
+  }, 3000);
 
   app.on("activate", function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (BrowserWindow.getAllWindows().length === 0) createWindow();
+    if (BrowserWindow.getAllWindows().length === 0) createWindow(splash);
   });
 });
 
