@@ -4,11 +4,11 @@ import * as path from "path";
 function createWindow(splash: BrowserWindow) {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    height: 600,
+    height: 810,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
-    width: 800,
+    width: 1440,
   });
 
   // and load the index.html of the app.
@@ -29,7 +29,7 @@ app.on("ready", () => {
   splash.loadURL(`file://${__dirname}/../splash.html`);
   setTimeout(() => {
     createWindow(splash);
-  }, 3000);
+  }, 2000);
 
   app.on("activate", function () {
     // On macOS it's common to re-create a window in the app when the
