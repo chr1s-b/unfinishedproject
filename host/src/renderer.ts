@@ -1,4 +1,4 @@
-import * as display from './utils/display';
+import { image } from './utils/display';
 import { playAudio } from "./utils/audio";
 import { ipcRenderer } from 'electron';
 import { clipboard, nativeImage } from 'electron';
@@ -24,5 +24,3 @@ btn.addEventListener("click", (e:Event) => doThing());
 
         
 }
-
-console.log(display.image);
