@@ -4,14 +4,8 @@ import { ipcRenderer } from 'electron';
 import { clipboard, nativeImage } from 'electron';
 
 function doThing(){
-    let i = document.getElementById("clipboardImg") as HTMLImageElement;
-    if(i!=null){
-        console.log(clipboard.readImage().getSize().height);
-        i.src = clipboard.readImage().toDataURL();
-        console.log("Beef")
-
-    }
-
+    let i = new image(clipboard.readImage().toDataURL());
+    i.show(0,0);
 }
 
 
