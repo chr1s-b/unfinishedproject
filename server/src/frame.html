@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8" />
+    <title>UnfinishedProject</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+</head>
+<body>
+    <h1>outside content region</h1>
+    <div id="content-region">
+        <div class="title">
+            <p>UnfinishedProject</p>
+        </div>
+        <iframe name="dud" style="display:none;"></iframe> <!-- very useful -->
+        <form id="playerjoin" autocomplete="off" target="dud" onsubmit="createConnection(event)">
+            <div class="inputs">
+                <div class="inputsection">
+                    <label>Room code</label>
+                    <input id="room" placeholder="ENTER GAME CODE" type="text" style="text-transform:uppercase" maxlength="4">
+                </div>
+                <div class="inputsection">
+                    <label>Name</label>
+                    <input id="name" placeholder="ENTER YOUR NAME" type="text" style="text-transform:uppercase" maxlength="12">
+                </div>
+            </div>
+            <button type="submit">
+                Play
+            </button>
+        </form>
+    </div>
+    <script src="client.js" type="text/javascript"></script>
+</body>
+</html>
