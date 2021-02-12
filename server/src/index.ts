@@ -102,10 +102,6 @@ class Room {
                     this.clients[client.toUpperCase()].tell(data.content);
                 }
             }); 
-        } else if ((data.action == "broadcast") || (data.action == "sendall")) {
-            Object.keys(this.clients).forEach((client: string) => {
-                this.clients[client.toUpperCase()].tell(data.content);
-            });
         }
     }
 
@@ -142,6 +138,6 @@ class Player {
         // check special cases like dropped connection or something requiring server action
 
         // forward onto host
-        this.host.send(Message(this.name,"clientdata",JSON.stringify(data.content)));
+        this.host.send(Message(this.name,"clientdata",JSON.stringify(data)));
     }
 }

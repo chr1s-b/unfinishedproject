@@ -1,8 +1,6 @@
 import { app, BrowserWindow } from "electron";
 import * as path from "path";
 
-import { wsclient } from './utils/wsconnection';
-
 function createWindow(splash: BrowserWindow) {
   // Create the browser window.
   const mainWindow = new BrowserWindow({

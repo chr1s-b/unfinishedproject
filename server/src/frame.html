@@ -9,12 +9,12 @@
 </head>
 <body>
     <h1>outside content region</h1>
+    <iframe name="dud" style="display:none;"></iframe> <!-- very useful -->
     <div id="content-region">
         <div class="title">
             <p>UnfinishedProject</p>
         </div>
-        <iframe name="dud" style="display:none;"></iframe> <!-- very useful -->
-        <form id="playerjoin" autocomplete="off" target="dud" onsubmit="createConnection(event)">
+        <form id="playerjoin" autocomplete="off" target="dud" onsubmit="createConnection()">
             <div class="inputs">
                 <div class="inputsection">
                     <label>Room code</label>
